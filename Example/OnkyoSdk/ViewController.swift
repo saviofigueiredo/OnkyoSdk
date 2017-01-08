@@ -58,7 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be re	created.
     }
     
     func switchChanged(sender: AnyObject) {
@@ -66,16 +65,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let switchControl:UISwitch = sender as! UISwitch
         if switchControl.isOn {
 
-            var result = OnkyoClient().sendCommand(to: items[0], commandName: "powerOn")
+            let onkyoClient = OnkyoClient(device: items[0])
+            
+            var result = onkyoClient.sendCommand(to: items[0], commandName: .powerOn)
             print ("\(result)")
             
-            result = OnkyoClient().sendCommand(to: items[0], commandName: "powerQuery")
+            result = onkyoClient.sendCommand(to: items[0], commandName: .powerQuery)
             print ("\(result)")
             
-            result = OnkyoClient().sendCommand(to: items[0], commandName: "inputSelectorNetwork")
+            result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorNetwork)
             print ("\(result)")
             
-            result = OnkyoClient().sendCommand(to: items[0], commandName: "inputSelectorQuery")
+            result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorQuery)
             print ("\(result)")
         }
     }

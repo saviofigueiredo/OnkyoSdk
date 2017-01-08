@@ -21,9 +21,9 @@
 		A2C8FECD1E21D34400E40C1E /* Sockaddr_inExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEC91E21D34400E40C1E /* Sockaddr_inExtension.swift */; };
 		A2C8FECE1E21D34400E40C1E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FECA1E21D34400E40C1E /* Socket.swift */; };
 		A2C8FED21E21DFF100E40C1E /* IscpPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */; };
-		A2C8FEDE1E2200A700E40C1E /* OnkyoCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEDD1E2200A700E40C1E /* OnkyoCommand.swift */; };
 		A2C8FEE01E2209A100E40C1E /* OnkyoCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEDF1E2209A100E40C1E /* OnkyoCommandFactory.swift */; };
 		A2C8FEE21E220B6500E40C1E /* OnkyoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEE11E220B6500E40C1E /* OnkyoClient.swift */; };
+		A2C8FEE41E22D16B00E40C1E /* OnkyoCommandName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEE31E22D16B00E40C1E /* OnkyoCommandName.swift */; };
 		E42EE34EEE743326A37840DEA345E00F /* OnkyoSdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A97423CFD26F2F3358D76B3AAE4425 /* OnkyoSdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,9 +60,9 @@
 		A2C8FEC91E21D34400E40C1E /* Sockaddr_inExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sockaddr_inExtension.swift; path = Socket/Sockaddr_inExtension.swift; sourceTree = "<group>"; };
 		A2C8FECA1E21D34400E40C1E /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Socket/Socket.swift; sourceTree = "<group>"; };
 		A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IscpPacket.swift; path = OnkyoClient/IscpPacket.swift; sourceTree = "<group>"; };
-		A2C8FEDD1E2200A700E40C1E /* OnkyoCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnkyoCommand.swift; path = OnkyoClient/OnkyoCommand.swift; sourceTree = "<group>"; };
 		A2C8FEDF1E2209A100E40C1E /* OnkyoCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnkyoCommandFactory.swift; sourceTree = "<group>"; };
 		A2C8FEE11E220B6500E40C1E /* OnkyoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnkyoClient.swift; sourceTree = "<group>"; };
+		A2C8FEE31E22D16B00E40C1E /* OnkyoCommandName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnkyoCommandName.swift; sourceTree = "<group>"; };
 		A3C027D255D66C1FF288DD5DF5A99AEA /* Pods-OnkyoSdk_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnkyoSdk_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A48B5A3AD5DC1D6A66E12603843FEBAF /* OnkyoSdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OnkyoSdk.xcconfig; sourceTree = "<group>"; };
 		A99361C1746B1CB2348079375D4FC6C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,9 +217,9 @@
 				A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */,
 				A2C8FEC21E21D31D00E40C1E /* OnkyoDevice.swift */,
 				A2C8FEC31E21D31D00E40C1E /* OnkyoDeviceFactory.swift */,
-				A2C8FEDD1E2200A700E40C1E /* OnkyoCommand.swift */,
-				A2C8FEDF1E2209A100E40C1E /* OnkyoCommandFactory.swift */,
 				A2C8FEE11E220B6500E40C1E /* OnkyoClient.swift */,
+				A2C8FEDF1E2209A100E40C1E /* OnkyoCommandFactory.swift */,
+				A2C8FEE31E22D16B00E40C1E /* OnkyoCommandName.swift */,
 			);
 			name = OnkyoClient;
 			sourceTree = "<group>";
@@ -385,13 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C8FEE41E22D16B00E40C1E /* OnkyoCommandName.swift in Sources */,
 				81BF29903530A12F7AF27ED9D534C413 /* OnkyoSdk-dummy.m in Sources */,
 				A2C8FECE1E21D34400E40C1E /* Socket.swift in Sources */,
 				A2C8FED21E21DFF100E40C1E /* IscpPacket.swift in Sources */,
 				A2C8FEC41E21D31D00E40C1E /* OnkyoDevice.swift in Sources */,
 				A2C8FEE01E2209A100E40C1E /* OnkyoCommandFactory.swift in Sources */,
 				A2C8FEE21E220B6500E40C1E /* OnkyoClient.swift in Sources */,
-				A2C8FEDE1E2200A700E40C1E /* OnkyoCommand.swift in Sources */,
 				A2C8FECD1E21D34400E40C1E /* Sockaddr_inExtension.swift in Sources */,
 				A2C8FECB1E21D34400E40C1E /* FdsetExtension.swift in Sources */,
 				A2C8FEC51E21D31D00E40C1E /* OnkyoDeviceFactory.swift in Sources */,

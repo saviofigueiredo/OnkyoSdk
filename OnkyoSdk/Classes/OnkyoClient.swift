@@ -10,11 +10,18 @@ import Foundation
 
 public class OnkyoClient {
     
-    public init() {
+    let socket: Socket?
+    
+    public init(device: OnkyoDevice) {
         
+        socket = Socket(address: device.address!, port: UInt16(device.port!)!)
     }
     
-    public func sendCommand(to: OnkyoDevice, commandName: String) -> String {
+    public func sendCommand(to: OnkyoDevice, commandName: OnkyoCommandName) -> String {
+        
+        guard socket != nil else {
+            return ""
+        }
         
         let commandCode = OnkyoCommandFactory().getCommandCode(commandName: commandName)
         
@@ -22,10 +29,8 @@ public class OnkyoClient {
         
         let packet = iscpPacket.getPacket();
         
-        let socket = Socket(address: to.address!, port: UInt16(to.port!)!)
+        let commandResult = socket!.sendPacket(packet: packet)
         
-        let commandResult = socket?.sendPacket(packet: packet)
-        
-        return commandResult!
+        return commandResult
     }
 }
