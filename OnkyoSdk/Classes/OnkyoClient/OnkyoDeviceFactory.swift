@@ -8,9 +8,12 @@
 
 import Foundation
 
-class OnkyoDeviceFactory {
+public class OnkyoDeviceFactory {
     
-    func discoverDevices(broadcastAddress: String) -> [OnkyoDevice] {
+    public init() {
+    }
+    
+    public func discoverDevices(broadcastAddress: String) -> [OnkyoDevice] {
         
         guard let socket = Socket() else {
             return []

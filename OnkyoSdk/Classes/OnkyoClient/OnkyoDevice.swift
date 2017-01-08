@@ -8,12 +8,12 @@
 
 import Foundation
 
-class OnkyoDevice {
+public class OnkyoDevice {
     
-    var address: String?
-    var model: String?
-    var uniqueIdentifier: String?
-    var port: String?
+    public var address: String?
+    public var model: String?
+    public var uniqueIdentifier: String?
+    public var port: String?
     
     public init(address: String, packet: Data) {
         
@@ -51,14 +51,5 @@ class OnkyoDevice {
         self.uniqueIdentifier = self.uniqueIdentifier?.replacingOccurrences(of: "\r", with: "", options: String.CompareOptions.literal, range:nil)
         self.uniqueIdentifier = self.uniqueIdentifier?.replacingOccurrences(of: "\n", with: "", options: String.CompareOptions.literal, range:nil)
         self.uniqueIdentifier = self.uniqueIdentifier?.replacingOccurrences(of: "\u{19}", with: "", options: String.CompareOptions.literal, range:nil)
-    }
-    
-    func turnOn() {
-
-        let iscpPacket = IscpPacket(message: "!1PWR01\r")
-        let packet = iscpPacket.getPacket();
-        
-        let socket = Socket(address: address!, port: UInt16(port!)!)
-        socket?.sendPacket(packet: packet)
     }
 }

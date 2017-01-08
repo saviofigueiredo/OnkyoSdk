@@ -11,11 +11,11 @@ import Darwin
 
 extension fd_set {
     
-    public mutating func clear() {
+    mutating func clear() {
         self.fds_bits = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
     }
     
-    public func isSet(_ fd: Int32) -> Bool {
+    func isSet(_ fd: Int32) -> Bool {
         let intOffset = Int(fd / 32)
         let bitOffset = fd % 32
         let mask = 1 << bitOffset
@@ -56,7 +56,7 @@ extension fd_set {
         }
     }
     
-    public mutating func set(_ fd: Int32) {
+    mutating func set(_ fd: Int32) {
         let intOffset = Int(fd / 32)
         let bitOffset = fd % 32
         let mask = 1 << bitOffset

@@ -65,9 +65,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let switchControl:UISwitch = sender as! UISwitch
         if switchControl.isOn {
-            items[0].turnOn()
+
+            var result = OnkyoClient().sendCommand(to: items[0], commandName: "powerOn")
+            print ("\(result)")
+            
+            result = OnkyoClient().sendCommand(to: items[0], commandName: "powerQuery")
+            print ("\(result)")
+            
+            result = OnkyoClient().sendCommand(to: items[0], commandName: "inputSelectorNetwork")
+            print ("\(result)")
+            
+            result = OnkyoClient().sendCommand(to: items[0], commandName: "inputSelectorQuery")
+            print ("\(result)")
         }
     }
-
 }
 

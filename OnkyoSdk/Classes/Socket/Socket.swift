@@ -65,7 +65,7 @@ class Socket {
         close (socketDescriptor)
     }
     
-    func sendPacket(packet: Data) {
+    func sendPacket(packet: Data) -> String {
         
         var array = [UInt8](repeating: 0, count: packet.count)
         packet.copyBytes(to: &array, count: packet.count)
@@ -73,8 +73,10 @@ class Socket {
         let bytesSentCount = send(socketDescriptor, array, array.count, 0)
         guard bytesSentCount == array.count else {
             print ("Number of sent bytes \(bytesSentCount) does not match the number of bytes to be sent \(array.count).")
+            print ("Error code is \(errno)")
+            print ("Error message is \(String(utf8String: strerror(errno)))")
             close (socketDescriptor)
-            return
+            return ""
         }
         
         var buffer = [UInt8](repeating: 0, count: 100)
@@ -83,8 +85,11 @@ class Socket {
             print ("Error code is \(errno)")
             print ("Error message is \(String(utf8String: strerror(errno)))")
             close(socketDescriptor)
-            return
+            return ""
         }
+        
+        print ("Packet received (String) is \(String(data: Data(bytes: buffer), encoding: String.Encoding.utf8)!)")
+        return String(data: Data(bytes: buffer), encoding: String.Encoding.utf8)!
     }
     
     func sendPacket(broadcastAddress: String, port: UInt16, packet: Data) {
@@ -138,8 +143,7 @@ class Socket {
                 }
                 
                 let deviceAddress = String(cString: inet_ntoa(sockaddr_in(address: &internetAddress).sin_addr), encoding: .ascii)!
-                print ("The device address is \(deviceAddress)")
-                print ("Packet received ([UInt8]) is \(buffer)")
+                
                 print ("Packet received (String) is \(String(data: Data(bytes: buffer), encoding: String.Encoding.utf8)!)")
                 packets.append(Packet(address: deviceAddress, packet: Data(bytes: buffer)))
             }
