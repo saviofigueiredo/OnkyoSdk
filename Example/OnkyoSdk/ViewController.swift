@@ -64,20 +64,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let switchControl:UISwitch = sender as! UISwitch
         if switchControl.isOn {
-
-            let onkyoClient = OnkyoClient(device: items[0])
             
-            //var result = onkyoClient.sendCommand(to: items[0], commandName: .powerOn)
-            //print ("\(result)")
+            var result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerQuery)
+            print ("\(result.receivedCommandName)")
+            print ("\(result.receivedMessage)")
             
-            var result = onkyoClient.sendCommand(to: items[0], commandName: .powerQuery)
-            print ("\(result)")
+            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
+            print ("\(result.receivedCommandName)")
+            print ("\(result.receivedMessage)")
+        
+            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerQuery)
+            print ("\(result.receivedCommandName)")
+            print ("\(result.receivedMessage)")
             
-            //result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorNetwork)
-            //print ("\(result)")
-            
-            result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorQuery)
-            print ("\(result)")
+            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
+            print ("\(result.receivedCommandName)")
+            print ("\(result.receivedMessage)")
         }
     }
 }
