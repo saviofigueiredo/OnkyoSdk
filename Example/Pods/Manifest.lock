@@ -1,0 +1,16 @@
+PODS:
+  - OnkyoSdk (0.1.0)
+
+DEPENDENCIES:
+  - OnkyoSdk (from `../`)
+
+EXTERNAL SOURCES:
+  OnkyoSdk:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OnkyoSdk: 3af6f7c78e7019bd5bcb9d0270634ebb9c46eec5
+
+PODFILE CHECKSUM: c4425ca52070779cdf2a5fec6ecd6ebcbc74b674
+
+COCOAPODS: 1.1.1

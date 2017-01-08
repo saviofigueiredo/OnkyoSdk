@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OnkyoSdk_Example' do
+  pod 'OnkyoSdk', :path => '../'
+
+  target 'OnkyoSdk_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

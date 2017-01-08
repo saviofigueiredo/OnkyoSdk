@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015AA3A0C3462A99155F5B4EA3848EE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		290F789E0FDC0BD596EBADFA1CB84C3A /* Pods-OnkyoSdk_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EEA685BC2C65EF26673EC1353FE8D40 /* Pods-OnkyoSdk_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4289D033E1850A91C5BB4944CF2DE686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		4744060CEA941D61FDAB0484B94A0319 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		56D862F1754C9FF8AC5F5464BD70DAF3 /* Pods-OnkyoSdk_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C5D8A58F477BAE409C13C46E358193E /* Pods-OnkyoSdk_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BA995B8248DEB905379A4E011DC41E0 /* Pods-OnkyoSdk_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7220B1DE59EF613387815B63B05D97 /* Pods-OnkyoSdk_Example-dummy.m */; };
+		81BF29903530A12F7AF27ED9D534C413 /* OnkyoSdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C97F8B7B30240D6C416C41DC3AFEFE /* OnkyoSdk-dummy.m */; };
+		9453012EA421891AE40EFB0B51C83DE2 /* Pods-OnkyoSdk_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880534CEA03526E4D6B70868E465AD0E /* Pods-OnkyoSdk_Tests-dummy.m */; };
+		A2C8FEC41E21D31D00E40C1E /* OnkyoDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEC21E21D31D00E40C1E /* OnkyoDevice.swift */; };
+		A2C8FEC51E21D31D00E40C1E /* OnkyoDeviceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEC31E21D31D00E40C1E /* OnkyoDeviceFactory.swift */; };
+		A2C8FECB1E21D34400E40C1E /* FdsetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEC71E21D34400E40C1E /* FdsetExtension.swift */; };
+		A2C8FECD1E21D34400E40C1E /* Sockaddr_inExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FEC91E21D34400E40C1E /* Sockaddr_inExtension.swift */; };
+		A2C8FECE1E21D34400E40C1E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FECA1E21D34400E40C1E /* Socket.swift */; };
+		A2C8FED21E21DFF100E40C1E /* IscpPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */; };
+		E42EE34EEE743326A37840DEA345E00F /* OnkyoSdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A97423CFD26F2F3358D76B3AAE4425 /* OnkyoSdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ED510BD1C4D52695F9B999909006C60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 921CCCD4A8CB70C0DAC878B5FBD47586;
+			remoteInfo = OnkyoSdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EEA685BC2C65EF26673EC1353FE8D40 /* Pods-OnkyoSdk_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OnkyoSdk_Example-umbrella.h"; sourceTree = "<group>"; };
+		170B74111B6B20832D2A8A0FB0B58EF8 /* OnkyoSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnkyoSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		323910D154C88C45B4526DCFFE32EBE0 /* Pods_OnkyoSdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnkyoSdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEBD77DF3219690F830F69BA1CAB539 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A1842B0BA1C777E09E97D8ED9B0685 /* Pods-OnkyoSdk_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OnkyoSdk_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		611B1343291118732A0A961DD454955F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DEA7121332AD96497A4EE1DB69AB8E4 /* Pods-OnkyoSdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnkyoSdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		74C97F8B7B30240D6C416C41DC3AFEFE /* OnkyoSdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OnkyoSdk-dummy.m"; sourceTree = "<group>"; };
+		817C44364E29A7D7FF285BA7D45C815A /* OnkyoSdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OnkyoSdk-prefix.pch"; sourceTree = "<group>"; };
+		880534CEA03526E4D6B70868E465AD0E /* Pods-OnkyoSdk_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OnkyoSdk_Tests-dummy.m"; sourceTree = "<group>"; };
+		88DB5BCF14C9400DB917363A5CA6A7D4 /* Pods-OnkyoSdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnkyoSdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8C5D8A58F477BAE409C13C46E358193E /* Pods-OnkyoSdk_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OnkyoSdk_Tests-umbrella.h"; sourceTree = "<group>"; };
+		91A97423CFD26F2F3358D76B3AAE4425 /* OnkyoSdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OnkyoSdk-umbrella.h"; sourceTree = "<group>"; };
+		91DA1CA77E4AE35C80496A247B83E2C5 /* Pods_OnkyoSdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnkyoSdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96B5D4F7FF4D3B673D3A7F467C659D1C /* OnkyoSdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OnkyoSdk.modulemap; sourceTree = "<group>"; };
+		A2C8FEC21E21D31D00E40C1E /* OnkyoDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnkyoDevice.swift; path = OnkyoClient/OnkyoDevice.swift; sourceTree = "<group>"; };
+		A2C8FEC31E21D31D00E40C1E /* OnkyoDeviceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnkyoDeviceFactory.swift; path = OnkyoClient/OnkyoDeviceFactory.swift; sourceTree = "<group>"; };
+		A2C8FEC71E21D34400E40C1E /* FdsetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FdsetExtension.swift; path = Socket/FdsetExtension.swift; sourceTree = "<group>"; };
+		A2C8FEC91E21D34400E40C1E /* Sockaddr_inExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sockaddr_inExtension.swift; path = Socket/Sockaddr_inExtension.swift; sourceTree = "<group>"; };
+		A2C8FECA1E21D34400E40C1E /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Socket/Socket.swift; sourceTree = "<group>"; };
+		A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IscpPacket.swift; path = OnkyoClient/IscpPacket.swift; sourceTree = "<group>"; };
+		A3C027D255D66C1FF288DD5DF5A99AEA /* Pods-OnkyoSdk_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnkyoSdk_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A48B5A3AD5DC1D6A66E12603843FEBAF /* OnkyoSdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OnkyoSdk.xcconfig; sourceTree = "<group>"; };
+		A99361C1746B1CB2348079375D4FC6C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5056480EC4CAF40E69E8EA3A5389212 /* Pods-OnkyoSdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnkyoSdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B77B217E202C1BCE5C628EE78D27D79C /* Pods-OnkyoSdk_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OnkyoSdk_Example.modulemap"; sourceTree = "<group>"; };
+		BC238BE4DBB7F0F40E62A4C42B717B1F /* Pods-OnkyoSdk_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnkyoSdk_Example-resources.sh"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CCA7F622E1BD960F31F631B47BA678ED /* Pods-OnkyoSdk_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnkyoSdk_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CDD372ED5BFCDA111495A8EBD27E9024 /* Pods-OnkyoSdk_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnkyoSdk_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CFE58C89A74F246A4EE350FD889C9841 /* Pods-OnkyoSdk_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnkyoSdk_Tests-resources.sh"; sourceTree = "<group>"; };
+		D10708CC22123ABD74FD4115E62B372A /* Pods-OnkyoSdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnkyoSdk_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DC17093501BD920391E4C82F265BBBB8 /* Pods-OnkyoSdk_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OnkyoSdk_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DC4F40D54F9529DEDC7D6205F4F6FB54 /* Pods-OnkyoSdk_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnkyoSdk_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC82D7806219918B2939D5219CC6DED3 /* Pods-OnkyoSdk_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OnkyoSdk_Tests.modulemap"; sourceTree = "<group>"; };
+		FE7220B1DE59EF613387815B63B05D97 /* Pods-OnkyoSdk_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OnkyoSdk_Example-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C3C6D053FFEB3EFC7096AAF0B77E846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4744060CEA941D61FDAB0484B94A0319 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F3D9D700CE25558EF5FBF8FDB91671E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				015AA3A0C3462A99155F5B4EA3848EE9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22BC624B7C2F4B0408FEAB1AF573F86B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4289D033E1850A91C5BB4944CF2DE686 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16616ACD96688E805F9443F4A22F49FC /* Pods-OnkyoSdk_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3BEBD77DF3219690F830F69BA1CAB539 /* Info.plist */,
+				FC82D7806219918B2939D5219CC6DED3 /* Pods-OnkyoSdk_Tests.modulemap */,
+				DC17093501BD920391E4C82F265BBBB8 /* Pods-OnkyoSdk_Tests-acknowledgements.markdown */,
+				DC4F40D54F9529DEDC7D6205F4F6FB54 /* Pods-OnkyoSdk_Tests-acknowledgements.plist */,
+				880534CEA03526E4D6B70868E465AD0E /* Pods-OnkyoSdk_Tests-dummy.m */,
+				CCA7F622E1BD960F31F631B47BA678ED /* Pods-OnkyoSdk_Tests-frameworks.sh */,
+				CFE58C89A74F246A4EE350FD889C9841 /* Pods-OnkyoSdk_Tests-resources.sh */,
+				8C5D8A58F477BAE409C13C46E358193E /* Pods-OnkyoSdk_Tests-umbrella.h */,
+				6DEA7121332AD96497A4EE1DB69AB8E4 /* Pods-OnkyoSdk_Tests.debug.xcconfig */,
+				B5056480EC4CAF40E69E8EA3A5389212 /* Pods-OnkyoSdk_Tests.release.xcconfig */,
+			);
+			name = "Pods-OnkyoSdk_Tests";
+			path = "Target Support Files/Pods-OnkyoSdk_Tests";
+			sourceTree = "<group>";
+		};
+		2441A4FBD91DC02925B4114D9733CEB6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2C8FEC61E21D33300E40C1E /* Socket */,
+				A2C8FEC11E21D30900E40C1E /* OnkyoClient */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2F2C17053553912E79DC00CC6E5CAF71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				611B1343291118732A0A961DD454955F /* Info.plist */,
+				96B5D4F7FF4D3B673D3A7F467C659D1C /* OnkyoSdk.modulemap */,
+				A48B5A3AD5DC1D6A66E12603843FEBAF /* OnkyoSdk.xcconfig */,
+				74C97F8B7B30240D6C416C41DC3AFEFE /* OnkyoSdk-dummy.m */,
+				817C44364E29A7D7FF285BA7D45C815A /* OnkyoSdk-prefix.pch */,
+				91A97423CFD26F2F3358D76B3AAE4425 /* OnkyoSdk-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/OnkyoSdk";
+			sourceTree = "<group>";
+		};
+		565F583F8B26B22035642A9C3C9226B5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5871ECD97FB5962946295D181517DEDD /* Pods-OnkyoSdk_Example */,
+				16616ACD96688E805F9443F4A22F49FC /* Pods-OnkyoSdk_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5871ECD97FB5962946295D181517DEDD /* Pods-OnkyoSdk_Example */ = {
+			isa = PBXGroup;
+			children = (
+				A99361C1746B1CB2348079375D4FC6C1 /* Info.plist */,
+				B77B217E202C1BCE5C628EE78D27D79C /* Pods-OnkyoSdk_Example.modulemap */,
+				50A1842B0BA1C777E09E97D8ED9B0685 /* Pods-OnkyoSdk_Example-acknowledgements.markdown */,
+				A3C027D255D66C1FF288DD5DF5A99AEA /* Pods-OnkyoSdk_Example-acknowledgements.plist */,
+				FE7220B1DE59EF613387815B63B05D97 /* Pods-OnkyoSdk_Example-dummy.m */,
+				CDD372ED5BFCDA111495A8EBD27E9024 /* Pods-OnkyoSdk_Example-frameworks.sh */,
+				BC238BE4DBB7F0F40E62A4C42B717B1F /* Pods-OnkyoSdk_Example-resources.sh */,
+				0EEA685BC2C65EF26673EC1353FE8D40 /* Pods-OnkyoSdk_Example-umbrella.h */,
+				88DB5BCF14C9400DB917363A5CA6A7D4 /* Pods-OnkyoSdk_Example.debug.xcconfig */,
+				D10708CC22123ABD74FD4115E62B372A /* Pods-OnkyoSdk_Example.release.xcconfig */,
+			);
+			name = "Pods-OnkyoSdk_Example";
+			path = "Target Support Files/Pods-OnkyoSdk_Example";
+			sourceTree = "<group>";
+		};
+		6085BBC5001A43C09EC22E39194F1870 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2B569D7482475C6507D4849687B9C5F /* OnkyoSdk */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				6085BBC5001A43C09EC22E39194F1870 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				AD21DB267A5CC21658B4D46B04B4F389 /* Products */,
+				565F583F8B26B22035642A9C3C9226B5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		868DB19C5A993F31FD1CBBA1F919CA42 /* OnkyoSdk */ = {
+			isa = PBXGroup;
+			children = (
+				2441A4FBD91DC02925B4114D9733CEB6 /* Classes */,
+			);
+			path = OnkyoSdk;
+			sourceTree = "<group>";
+		};
+		A2C8FEC11E21D30900E40C1E /* OnkyoClient */ = {
+			isa = PBXGroup;
+			children = (
+				A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */,
+				A2C8FEC21E21D31D00E40C1E /* OnkyoDevice.swift */,
+				A2C8FEC31E21D31D00E40C1E /* OnkyoDeviceFactory.swift */,
+			);
+			name = OnkyoClient;
+			sourceTree = "<group>";
+		};
+		A2C8FEC61E21D33300E40C1E /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				A2C8FECA1E21D34400E40C1E /* Socket.swift */,
+				A2C8FEC71E21D34400E40C1E /* FdsetExtension.swift */,
+				A2C8FEC91E21D34400E40C1E /* Sockaddr_inExtension.swift */,
+			);
+			name = Socket;
+			sourceTree = "<group>";
+		};
+		AD21DB267A5CC21658B4D46B04B4F389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				170B74111B6B20832D2A8A0FB0B58EF8 /* OnkyoSdk.framework */,
+				323910D154C88C45B4526DCFFE32EBE0 /* Pods_OnkyoSdk_Example.framework */,
+				91DA1CA77E4AE35C80496A247B83E2C5 /* Pods_OnkyoSdk_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2B569D7482475C6507D4849687B9C5F /* OnkyoSdk */ = {
+			isa = PBXGroup;
+			children = (
+				868DB19C5A993F31FD1CBBA1F919CA42 /* OnkyoSdk */,
+				2F2C17053553912E79DC00CC6E5CAF71 /* Support Files */,
+			);
+			name = OnkyoSdk;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BACFDFD4CA788966EE12F90E7C7FB7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42EE34EEE743326A37840DEA345E00F /* OnkyoSdk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CCB37C81107DDA0677AE194BBC421ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D862F1754C9FF8AC5F5464BD70DAF3 /* Pods-OnkyoSdk_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9148BB893C7C8570EAFE0FB857339B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290F789E0FDC0BD596EBADFA1CB84C3A /* Pods-OnkyoSdk_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		890B505B0466BB51A154FFF055EDA219 /* Pods-OnkyoSdk_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35F9E049CB70CCA0E992F42BEF1F5DA6 /* Build configuration list for PBXNativeTarget "Pods-OnkyoSdk_Example" */;
+			buildPhases = (
+				76ADBEC83FE4CFA14C2440A80330C654 /* Sources */,
+				0F3D9D700CE25558EF5FBF8FDB91671E /* Frameworks */,
+				3A9148BB893C7C8570EAFE0FB857339B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1060522ABA2A70DE399C08FB220E184 /* PBXTargetDependency */,
+			);
+			name = "Pods-OnkyoSdk_Example";
+			productName = "Pods-OnkyoSdk_Example";
+			productReference = 323910D154C88C45B4526DCFFE32EBE0 /* Pods_OnkyoSdk_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		921CCCD4A8CB70C0DAC878B5FBD47586 /* OnkyoSdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3326FD472469773F0C77B3476ABAAE99 /* Build configuration list for PBXNativeTarget "OnkyoSdk" */;
+			buildPhases = (
+				5D3DCD5FBA42E1DEBD5A2AAD5C6C00AC /* Sources */,
+				0C3C6D053FFEB3EFC7096AAF0B77E846 /* Frameworks */,
+				0BACFDFD4CA788966EE12F90E7C7FB7E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnkyoSdk;
+			productName = OnkyoSdk;
+			productReference = 170B74111B6B20832D2A8A0FB0B58EF8 /* OnkyoSdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7574F3C121BF41C8E9596657E01C56F /* Pods-OnkyoSdk_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5EC875B43ECCC27F1ABCDAB0622253 /* Build configuration list for PBXNativeTarget "Pods-OnkyoSdk_Tests" */;
+			buildPhases = (
+				76EC2C57837A243E0379A3C6B97F5F12 /* Sources */,
+				22BC624B7C2F4B0408FEAB1AF573F86B /* Frameworks */,
+				1CCB37C81107DDA0677AE194BBC421ED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-OnkyoSdk_Tests";
+			productName = "Pods-OnkyoSdk_Tests";
+			productReference = 91DA1CA77E4AE35C80496A247B83E2C5 /* Pods_OnkyoSdk_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					890B505B0466BB51A154FFF055EDA219 = {
+						LastSwiftMigration = 0820;
+					};
+					921CCCD4A8CB70C0DAC878B5FBD47586 = {
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AD21DB267A5CC21658B4D46B04B4F389 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				921CCCD4A8CB70C0DAC878B5FBD47586 /* OnkyoSdk */,
+				890B505B0466BB51A154FFF055EDA219 /* Pods-OnkyoSdk_Example */,
+				C7574F3C121BF41C8E9596657E01C56F /* Pods-OnkyoSdk_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D3DCD5FBA42E1DEBD5A2AAD5C6C00AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81BF29903530A12F7AF27ED9D534C413 /* OnkyoSdk-dummy.m in Sources */,
+				A2C8FECE1E21D34400E40C1E /* Socket.swift in Sources */,
+				A2C8FED21E21DFF100E40C1E /* IscpPacket.swift in Sources */,
+				A2C8FEC41E21D31D00E40C1E /* OnkyoDevice.swift in Sources */,
+				A2C8FECD1E21D34400E40C1E /* Sockaddr_inExtension.swift in Sources */,
+				A2C8FECB1E21D34400E40C1E /* FdsetExtension.swift in Sources */,
+				A2C8FEC51E21D31D00E40C1E /* OnkyoDeviceFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ADBEC83FE4CFA14C2440A80330C654 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA995B8248DEB905379A4E011DC41E0 /* Pods-OnkyoSdk_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76EC2C57837A243E0379A3C6B97F5F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9453012EA421891AE40EFB0B51C83DE2 /* Pods-OnkyoSdk_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1060522ABA2A70DE399C08FB220E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OnkyoSdk;
+			target = 921CCCD4A8CB70C0DAC878B5FBD47586 /* OnkyoSdk */;
+			targetProxy = 0ED510BD1C4D52695F9B999909006C60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07F9B515E450BCB79882CE7E4C4871BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D10708CC22123ABD74FD4115E62B372A /* Pods-OnkyoSdk_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnkyoSdk_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnkyoSdk_Example/Pods-OnkyoSdk_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnkyoSdk_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2204B64F93E364F4FFB104016FEDD4AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48B5A3AD5DC1D6A66E12603843FEBAF /* OnkyoSdk.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OnkyoSdk/OnkyoSdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OnkyoSdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OnkyoSdk/OnkyoSdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = OnkyoSdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25753184AD51B467FA08313DBC7FA448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEA7121332AD96497A4EE1DB69AB8E4 /* Pods-OnkyoSdk_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnkyoSdk_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnkyoSdk_Tests/Pods-OnkyoSdk_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnkyoSdk_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BDD81BEE3E456C0B523B8D645BE4909B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DB5BCF14C9400DB917363A5CA6A7D4 /* Pods-OnkyoSdk_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnkyoSdk_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnkyoSdk_Example/Pods-OnkyoSdk_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnkyoSdk_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2A02A13BA14B5414643DF2F487958C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5056480EC4CAF40E69E8EA3A5389212 /* Pods-OnkyoSdk_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnkyoSdk_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnkyoSdk_Tests/Pods-OnkyoSdk_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnkyoSdk_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EDEC6C50D9D310EFB99D424A1F6E302D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48B5A3AD5DC1D6A66E12603843FEBAF /* OnkyoSdk.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OnkyoSdk/OnkyoSdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OnkyoSdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OnkyoSdk/OnkyoSdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = OnkyoSdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3326FD472469773F0C77B3476ABAAE99 /* Build configuration list for PBXNativeTarget "OnkyoSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDEC6C50D9D310EFB99D424A1F6E302D /* Debug */,
+				2204B64F93E364F4FFB104016FEDD4AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35F9E049CB70CCA0E992F42BEF1F5DA6 /* Build configuration list for PBXNativeTarget "Pods-OnkyoSdk_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD81BEE3E456C0B523B8D645BE4909B /* Debug */,
+				07F9B515E450BCB79882CE7E4C4871BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5EC875B43ECCC27F1ABCDAB0622253 /* Build configuration list for PBXNativeTarget "Pods-OnkyoSdk_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25753184AD51B467FA08313DBC7FA448 /* Debug */,
+				E2A02A13BA14B5414643DF2F487958C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

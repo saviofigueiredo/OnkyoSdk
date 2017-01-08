@@ -1,0 +1,6 @@
+framework module Pods_OnkyoSdk_Tests {
+  umbrella header "Pods-OnkyoSdk_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
