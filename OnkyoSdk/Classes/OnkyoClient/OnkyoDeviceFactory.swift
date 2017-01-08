@@ -28,7 +28,10 @@ public class OnkyoDeviceFactory {
         var devices: [OnkyoDevice] = []
         
         for packet in packets {
-            let device = OnkyoDevice(address: packet.address, packet: packet.packet)
+            guard let device = OnkyoDevice(address: packet.address, packet: packet.packet) else {
+                continue
+            }
+            
             devices.append(device)
         }
         

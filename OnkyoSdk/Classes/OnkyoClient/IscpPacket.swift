@@ -10,10 +10,57 @@ import Foundation
 
 class IscpPacket {
     
-    let message: String
+    public var message: String
     
     init (message: String) {
         self.message = message
+    }
+    
+    init? (packet: Data) {
+        
+        guard packet.count > 17 else {
+            return nil
+        }
+        
+        let magicChunk = packet.subdata(in: 0..<4)
+        let magic = String(data: magicChunk, encoding: String.Encoding.ascii)
+ 
+        guard magic == "ISCP" else {
+            return nil
+        }
+        
+        let headerLengthChunk = packet.subdata(in: 4..<8)
+        var headerLength: UInt32 = headerLengthChunk.withUnsafeBytes { $0.pointee }
+        headerLength = CFSwapInt32BigToHost(headerLength)
+        
+        let dataLengthChunk = packet.subdata(in: 8..<12)
+        var dataLength: UInt32 = dataLengthChunk.withUnsafeBytes { $0.pointee }
+        dataLength = CFSwapInt32BigToHost(dataLength)
+        
+        let versionChunk = packet.subdata(in: 12..<13)
+        let version: UInt32 = versionChunk.withUnsafeBytes { $0.pointee }
+        
+        let startMessageChunk = packet.subdata(in: 16..<17)
+        let startMessage = String(data: startMessageChunk, encoding: String.Encoding.ascii)
+        
+        guard startMessage == "!" else {
+            return nil
+        }
+        
+        let receiverChunk = packet.subdata(in: 17..<18)
+        let receiver = String(data: receiverChunk, encoding: String.Encoding.ascii)
+        
+        guard receiver == "1" else {
+            return nil
+        }
+        
+        let messageChunk = packet.subdata(in: Int(headerLength + 2)..<Int(headerLength + dataLength))
+        message = String(data: messageChunk, encoding: String.Encoding.utf8)!
+        
+        message = message.replacingOccurrences(of: "\r", with: "", options: String.CompareOptions.literal, range:nil)
+        message = message.replacingOccurrences(of: "\n", with: "", options: String.CompareOptions.literal, range:nil)
+        message = message.replacingOccurrences(of: "\u{19}", with: "", options: String.CompareOptions.literal, range:nil)
+        message = message.replacingOccurrences(of: "\u{1A}", with: "", options: String.CompareOptions.literal, range:nil)
     }
     
     func getPacket() -> Data {

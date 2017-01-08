@@ -29,8 +29,14 @@ public class OnkyoClient {
         
         let packet = iscpPacket.getPacket();
         
-        let commandResult = socket!.sendPacket(packet: packet)
+        guard let commandResult = socket!.sendPacket(packet: packet) else {
+            return ""
+        }
         
-        return commandResult
+        guard let returnedPacket = IscpPacket(packet: commandResult) else {
+            return ""
+        }
+        
+        return returnedPacket.message
     }
 }

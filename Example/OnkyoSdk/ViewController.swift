@@ -67,14 +67,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             let onkyoClient = OnkyoClient(device: items[0])
             
-            var result = onkyoClient.sendCommand(to: items[0], commandName: .powerOn)
+            //var result = onkyoClient.sendCommand(to: items[0], commandName: .powerOn)
+            //print ("\(result)")
+            
+            var result = onkyoClient.sendCommand(to: items[0], commandName: .powerQuery)
             print ("\(result)")
             
-            result = onkyoClient.sendCommand(to: items[0], commandName: .powerQuery)
-            print ("\(result)")
-            
-            result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorNetwork)
-            print ("\(result)")
+            //result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorNetwork)
+            //print ("\(result)")
             
             result = onkyoClient.sendCommand(to: items[0], commandName: .inputSelectorQuery)
             print ("\(result)")

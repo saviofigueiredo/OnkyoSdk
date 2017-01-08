@@ -214,12 +214,12 @@
 		A2C8FEC11E21D30900E40C1E /* OnkyoClient */ = {
 			isa = PBXGroup;
 			children = (
-				A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */,
 				A2C8FEC21E21D31D00E40C1E /* OnkyoDevice.swift */,
 				A2C8FEC31E21D31D00E40C1E /* OnkyoDeviceFactory.swift */,
 				A2C8FEE11E220B6500E40C1E /* OnkyoClient.swift */,
 				A2C8FEDF1E2209A100E40C1E /* OnkyoCommandFactory.swift */,
 				A2C8FEE31E22D16B00E40C1E /* OnkyoCommandName.swift */,
+				A2C8FED11E21DFF100E40C1E /* IscpPacket.swift */,
 			);
 			name = OnkyoClient;
 			sourceTree = "<group>";
