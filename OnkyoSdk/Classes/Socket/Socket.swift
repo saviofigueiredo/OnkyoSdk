@@ -70,6 +70,7 @@ class Socket {
         var array = [UInt8](repeating: 0, count: packet.count)
         packet.copyBytes(to: &array, count: packet.count)
         
+        print ("Packet to be sent: \(String(data: packet, encoding: String.Encoding.utf8)!)")
         let bytesSentCount = send(socketDescriptor, array, array.count, 0)
         guard bytesSentCount == array.count else {
             print ("Number of sent bytes \(bytesSentCount) does not match the number of bytes to be sent \(array.count).")
@@ -103,10 +104,10 @@ class Socket {
         var array = [UInt8](repeating: 0, count: packet.count)
         packet.copyBytes(to: &array, count: packet.count)
         
+        print ("Packet to be sent: \(String(data: packet, encoding: String.Encoding.utf8)!)")
         let numbytes = sendto(socketDescriptor, array, array.count, 0, &internetAddress, socklen_t(MemoryLayout<sockaddr_in>.size))
         
         print ("\(numbytes) have been sent to \(broadcastAddress)")
-        print (String(data: packet, encoding: String.Encoding.utf8)!)
     }
     
     func getResponses() -> [Packet] {
