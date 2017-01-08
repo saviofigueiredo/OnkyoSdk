@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A2C8FED91E21F58A00E40C1E /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8FED81E21F58A00E40C1E /* Interface.swift */; };
 		B4AEEC896F347EA862117099 /* Pods_OnkyoSdk_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4056E3E978835DBFA7E3B9CE /* Pods_OnkyoSdk_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,9 @@
 		607FACE51AFB9204008FA782 /* OnkyoSdk_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnkyoSdk_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		A2C8FED81E21F58A00E40C1E /* Interface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		A2C8FEDA1E21F5ED00E40C1E /* OnkyoSdk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnkyoSdk-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2C8FEDB1E21F80A00E40C1E /* OnkyoSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnkyoSdk.framework; path = "../../Library/Developer/Xcode/DerivedData/OnkyoSdk-eqxdpqbpcmzigjdgybpbusntpxkv/Build/Products/Debug-iphonesimulator/OnkyoSdk/OnkyoSdk.framework"; sourceTree = "<group>"; };
 		BC44012B60C9D364DEA92E14 /* Pods-OnkyoSdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnkyoSdk_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnkyoSdk_Example/Pods-OnkyoSdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEB32F59D441EAFE0EE00AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D63270210C5DA3F301B8CDE5 /* OnkyoSdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OnkyoSdk.podspec; path = ../OnkyoSdk.podspec; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				A2C8FED81E21F58A00E40C1E /* Interface.swift */,
+				A2C8FEDA1E21F5ED00E40C1E /* OnkyoSdk-Bridging-Header.h */,
 			);
 			name = "Example for OnkyoSdk";
 			path = OnkyoSdk;
@@ -142,6 +148,7 @@
 		C33E97BE6F2167349B1FC6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2C8FEDB1E21F80A00E40C1E /* OnkyoSdk.framework */,
 				170D04BB7987434B9CB7CBE4 /* Pods_OnkyoSdk_Example.framework */,
 				4056E3E978835DBFA7E3B9CE /* Pods_OnkyoSdk_Tests.framework */,
 			);
@@ -363,6 +370,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A2C8FED91E21F58A00E40C1E /* Interface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +455,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnkyoSdk/OnkyoSdk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -486,6 +495,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnkyoSdk/OnkyoSdk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

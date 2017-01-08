@@ -7,17 +7,66 @@
 //
 
 import UIKit
+import Foundation
+import OnkyoSdk
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var tableView: UITableView  =   UITableView()
+    
+    var items: [OnkyoDevice] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let addresses = Interface.getAllBroadcastAddresses()
+        
+        for broadcastAddress in addresses {
+            let itemsTemp = OnkyoDeviceFactory().discoverDevices(broadcastAddress: broadcastAddress)
+            items.append(contentsOf: itemsTemp)
+        }
+        
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        
+        tableView.frame         =   CGRect(x: 0, y: 50, width: screenWidth - 20, height: 200)
+        tableView.delegate      =   self
+        tableView.dataSource    =   self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        self.view.addSubview(tableView)
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row].model!
+        
+        let switchView: UISwitch = UISwitch(frame: CGRect.zero)
+        cell.accessoryView = switchView
+        switchView.setOn(false, animated: true)
+        switchView.addTarget(self, action: #selector(switchChanged), for: UIControlEvents.valueChanged)
+        
+        return cell
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be re	created.
+    }
+    
+    func switchChanged(sender: AnyObject) {
+        
+        let switchControl:UISwitch = sender as! UISwitch
+        if switchControl.isOn {
+            items[0].turnOn()
+        }
     }
 
 }
