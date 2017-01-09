@@ -16,8 +16,8 @@ public enum OnkyoCommandName : String {
     case audioMutingOff = "AMT00"
     case audioMutingQuery = "AMTQSTN"
     
-    case masterVolumeUp = "MVL01"
-    case masterVolumeDown = "MVL00"
+    case masterVolumeUp = "MVLUP"
+    case masterVolumeDown = "MVLDOWN"
     case masterVolumeQuery = "MVLQSTN"
     
     case inputSelectorCdDvd = "SLI23"

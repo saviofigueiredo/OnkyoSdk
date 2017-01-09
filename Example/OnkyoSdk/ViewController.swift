@@ -65,21 +65,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let switchControl:UISwitch = sender as! UISwitch
         if switchControl.isOn {
             
-            var result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerQuery)
-            print ("\(result.receivedCommandName)")
-            print ("\(result.receivedMessage)")
+            //var result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerOn)
+            //print ("\(result.receivedCommandName)")
+            //print ("\(result.receivedMessage)")
+
+            for _ in 1..<10 {
+                OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .masterVolumeUp)
+                
+                OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .masterVolumeQuery)
+            }
             
-            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
-            print ("\(result.receivedCommandName)")
-            print ("\(result.receivedMessage)")
+            OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
         
-            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerQuery)
-            print ("\(result.receivedCommandName)")
-            print ("\(result.receivedMessage)")
-            
-            result = OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
-            print ("\(result.receivedCommandName)")
-            print ("\(result.receivedMessage)")
+            OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .powerQuery)
+
+            OnkyoClient(device: items[0]).sendCommand(to: items[0], commandName: .inputSelectorQuery)
         }
     }
 }

@@ -17,7 +17,7 @@ public class OnkyoClient {
         socket = Socket(address: device.address!, port: UInt16(device.port!)!)
     }
     
-    public func sendCommand(to: OnkyoDevice, commandName: OnkyoCommandName) -> OnkyoCommandResult {
+    @discardableResult public func sendCommand(to: OnkyoDevice, commandName: OnkyoCommandName) -> OnkyoCommandResult {
         
         guard socket != nil else {
             return OnkyoCommandResult()
@@ -31,6 +31,9 @@ public class OnkyoClient {
         
         let receivedPacket = socket!.sendPacket(packet: packet)
         
-        return OnkyoCommandResult(receivedPacket: receivedPacket)
+        let result = OnkyoCommandResult(receivedPacket: receivedPacket)
+        print ("\(result.receivedCommandName)")
+        print ("\(result.receivedMessage)")
+        return result
     }
 }
